@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak robić gry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; 
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 2em 0;
+            background: linear-gradient(135deg, #ff5722, #ff9800);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 0.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #1e1e1e;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f0f0f0;
+            padding: 1em 1.5em;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ff5722;
+        }
+
+        .content-section {
+            padding: 2em;
+            margin: 1em auto;
+            max-width: 900px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .content-section h2 {
+            color: #fff;
+            font-size: 2em;
+            margin-top: 0;
+            width: 100%;
+        }
+
+        .content-section p {
+            margin-top: 1em;
+        }
+
+        .content-section ul {
+            margin: 1em 0;
+            padding: 0 1.5em;
+            width: 100%;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5em;
+        }
+
+        .content-section img {
+            width: 45%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            margin: 1em 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .content-section img:hover {
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5em 0;
+        }
+
+        table th, table td {
+            border: 1px solid #444;
+            padding: 0.8em;
+            text-align: left;
+            color: #f0f0f0;
+        }
+
+        table th {
+            background-color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5em 0;
+            background-color: #121212;
+            color: #fff;
+            margin-top: 2em;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .start-game-btn {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 0.8em 2em;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .start-game-btn:hover {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jak robić gry</h1>
+        <p>Dowiedz się, jak zacząć tworzyć gry i co do tego jest potrzebne.</p>
+        <button class="start-game-btn" onclick="document.getElementById('game-process').scrollIntoView();">Jak zacząć robić gry?</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#unity">Unity</a></li>
+            <li><a href="#unreal">Unreal Engine</a></li>
+            <li><a href="#compare">Porównanie</a></li>
+            <li><a href="#game-process">Jak zaczynają gry?</a></li> 
+        </ul>
+    </nav>
+
+    <main>
+        <section id="unity" class="content-section">
+            <h2>Unity</h2>
+            <div>
+                <img src="C:\Users\Lenovo\Desktop\Сайт для Техникума\unity.image.png" alt="Unity logo">
+            </div>
+            <div>
+                <p>Unity to jeden z najpopularniejszych silników do tworzenia gier. Słynie z prostoty, wsparcia wielu platform oraz ogromnej społeczności deweloperów.</p>
+                <ul>
+                    <li>Platformy: PC, urządzenia mobilne, VR/AR, konsole.</li>
+                    <li>Języki programowania: C# (przestarzały).</li>
+                    <li>Funkcje: Bogaty sklep z zasobami, intuicyjny interfejs.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="unreal" class="content-section">
+            <h2>Unreal Engine</h2>
+            <div>
+                <img src="C:\Users\Lenovo\Desktop\Сайт для Техникума\urealenging.image.png" alt="Unreal Engine logo">
+            </div>
+            <div>
+                <p>Unreal Engine to potężny silnik do tworzenia realistycznych gier 3D. Jego znakiem rozpoznawczym są niesamowite możliwości graficzne i elastyczność.</p>
+                <ul>
+                    <li>Platformy: PC, konsole, urządzenia mobilne, VR/AR.</li>
+                    <li>Języki programowania: C++, Blueprints (programowanie wizualne).</li>
+                    <li>Funkcje: Niezrównana grafika, możliwość tworzenia gier AAA.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="godot" class="content-section">
+            <h2>Godot</h2>
+            <div>
+                <img src="C:\Users\Lenovo\Desktop\Сайт для Техникума\godot.images.png" alt="Godot logo">
+            </div>
+            <div>
+                <p>Godot to silnik gier open-source, który zyskuje na popularności. Jest znany z łatwości obsługi, a także z możliwości tworzenia zarówno gier 2D, jak i 3D.</p>
+                <ul>
+                    <li>Platformy: PC, urządzenia mobilne, konsole, Web.</li>
+                    <li>Języki programowania: GDScript, C#.</li>
+                    <li>Funkcje: Wbudowane narzędzia 2D, open-source, szybki rozwój.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="compare" class="content-section">
+            <h2>Porównanie</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Silnik</th>
+                        <th>Platformy</th>
+                        <th>Język programowania</th>
+                        <th>Funkcje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Unity</td>
+                        <td>PC, mobilne, VR/AR, konsole</td>
+                        <td>C#</td>
+                        <td>Intuicyjny interfejs, sklep z zasobami</td>
+                    </tr>
+                    <tr>
+                        <td>Unreal Engine</td>
+                        <td>PC, konsole, mobilne, VR/AR</td>
+                        <td>C++, Blueprints</td>
+                        <td>Niezrównana grafika, tworzenie gier AAA</td>
+                    </tr>
+                    <tr>
+                        <td>Godot</td>
+                        <td>PC, mobilne, konsole, Web</td>
+                        <td>GDScript, C#</td>
+                        <td>Open-source, szybki rozwój, narzędzia 2D</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="game-process" class="content-section">
+            <h2>Jak zaczynają gry?</h2>
+            <p>Proces tworzenia gry zazwyczaj zaczyna się od pomysłu, który następnie rozwija się w projekt. Oto kilka kroków:</p>
+            <ul>
+                <li><strong>Pomysł:</strong> Zastanów się, jaka gra miałaby sens i co chciałbyś stworzyć.</li>
+                <li><strong>Planowanie:</strong> Określenie głównych funkcji gry, platformy, na której ma działać, oraz założeń fabularnych.</li>
+                <li><strong>Prototypowanie:</strong> Stworzenie pierwszej wersji gry, aby sprawdzić pomysł w praktyce.</li>
+                <li><strong>Produkcja:</strong> Pełne rozwinięcie gry, dodanie poziomów, postaci, efektów dźwiękowych i wizualnych.</li>
+                <li><strong>Testowanie:</strong> Gra musi być testowana, aby wyeliminować błędy i zoptymalizować rozgrywkę.</li>
+                <li><strong>Premiera:</strong> Gra jest gotowa do wydania.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
